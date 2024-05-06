@@ -1,0 +1,14 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "[apple team id].[app bundle id]",
+                "paths": [
+                    "NOT /_/*",
+                    "/*"
+                ]
+            }
+        ]
+    }
+}

@@ -14,10 +14,21 @@
 <main class="container">
     <h1>Welcome to [AppName]</h1>
     <p>Click the link below to open the app:</p>
-    <a href="[your_scheme]://[your.app.package]">Open App Using Scheme</a>
+    <a id="scheme-link" href="#">Open App Using Scheme</a>
     <br />
-    <a href="https://[your.web.site]">Open App Using Url</a>
+    <a id="https-link" href="#">Open App Using Url</a>
 </main>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const currentParams = window.location.search;
+
+        const schemeLink = document.getElementById("scheme-link");
+        const httpsLink = document.getElementById("https-link");
+
+        schemeLink.href = `[your_scheme]://[your.app.package]${currentParams}`;
+        httpsLink.href = `https://[your.web.site]${currentParams}`;
+    });
+</script>
 </body>
 </html>
